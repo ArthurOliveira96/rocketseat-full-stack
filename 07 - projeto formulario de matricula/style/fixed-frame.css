@@ -1,0 +1,51 @@
+@import url(global.css);
+
+.fixed-frame {
+    background-color: var(--surface-secondary);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+}
+
+.fixed-frame > div {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+
+    & span:first-child {
+        color: var(--text-primary);
+        font-family: "Schoolbell", cursive;
+        font-weight: 400;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    & h1 {
+        font-family: var(--font-family);
+        font-size: 40px;
+        line-height: 125%;
+        font-weight: 600;
+        color: var(--text-primary);
+
+        & strong {
+            font-weight: inherit;
+            color: var(--text-highlight);
+        }
+    }
+
+    & p {
+        font-family: var(--font-family);
+        color: var(--text-secondary);
+        line-height: 150%;
+        font-size: 16px;
+    }
+}
+
+.fixed-frame img {
+    max-width: 496px;
+    object-fit: cover;
+}

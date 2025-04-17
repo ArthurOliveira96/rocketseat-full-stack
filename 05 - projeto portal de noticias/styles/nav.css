@@ -1,0 +1,33 @@
+@import url(global.css);
+
+nav div.nav-primary {
+    padding: 26px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div.nav-primary > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav h2 {
+    color: var(--text-color-primary);
+    font-weight: bold;
+}
+
+nav div.nav-secondary {
+    border-top: 1px solid var(--stroke-color);
+    border-bottom: 1px solid var(--stroke-color);
+    padding: 14px 32px;
+}
+
+nav div.nav-secondary ul {
+    color: var(--text-color-secondary);
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

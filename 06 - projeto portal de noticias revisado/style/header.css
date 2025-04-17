@@ -1,0 +1,11 @@
+@import url(global.css);
+
+.primary {
+    padding: 20px 32px;
+}
+
+.secondary {
+    padding: 14px 32px;
+    border-top: 1px solid var(--stroke-color);
+    border-bottom: 1px solid var(--stroke-color);
+}

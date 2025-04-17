@@ -1,0 +1,284 @@
+@import url(global.css);
+
+form {
+    overflow: auto;
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+header {
+    & a {
+        margin-bottom: 24px;
+    }
+
+    & h1 {
+        margin-bottom: 8px;
+    }
+
+    & p {
+        color: var(--text-secondary);
+        font-size: 16px;
+        line-height: 150%;
+    }
+}
+
+fieldset {
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+
+    & legend {
+        font-weight: 800;
+        margin-bottom: 24px;
+    }
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 24px;
+    column-gap: 20px;
+}
+
+.form-control {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 4px;
+
+    & label {
+        line-height: 140%;
+        font-size: 14px;
+        color: var(--text-secondary);
+        font-weight: 400;
+
+        &.helper {
+            color: var(--text-tertiary);
+        }
+    }
+
+    & input, & select, & textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid var(--stroke-default);
+        border-radius: 8px;
+        font-family: var(--font-family);
+        color: var(--text-primary);
+        font-size: 16px;
+
+        &:focus, &:hover, &:focus-within {
+            border: 1px solid var(--stroke-highlight);
+            outline: 4px solid var(--surface-secondary);
+        }
+    }
+
+    & input[type='date']{
+        position: relative;
+
+        &::-webkit-calendar-picker-indicator {
+            position: absolute;
+            right: 1rem;
+            background-image: url(../assets/icons/calendar-03.png);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    & select {
+        appearance: none;
+        background-image: url(../assets/icons/arrow-left-02.png);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 1rem);
+    }
+
+    & textarea {
+        height: 120px;
+    }
+
+    & .dropzone {
+        border: 1px dashed var(--stroke-default);
+        border-radius: 8px;
+        width: 100%;
+        height: 160px;
+        position: relative;
+        padding: 1.75rem 1rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        &:hover, &:has(input:focus) {
+            border: 1px dashed var(--stroke-highlight);
+            background-color: var(--surface-secondary);
+
+            /* Baixa a imagem em COPY AS SVG para poder colar como elemento HTML e alterar a cor */
+            & svg path {
+                stroke: var(--stroke-highlight);
+            }
+
+            p {
+                color: var(--stroke-highlight);
+            }
+        }
+
+        & p {
+            width: 180px;
+            text-align: center;
+            color: #D6D3D1;
+        }
+
+        & input[type="file"] { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            opacity: 0;
+
+            &:hover {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.check-control {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+
+    & > p {
+        line-height: 140%;
+        font-size: 14px;
+        color: var(--text-secondary);
+        font-weight: 400;
+    }
+
+    & label {
+        position: relative;
+        border: 1px solid var(--stroke-default);
+        height: 128px;
+        padding: 32px 16px 16px 16px;
+        border-radius: 8px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+
+        &:hover, &:hover input {
+            cursor: pointer;
+            border: 1px solid var(--stroke-highlight);
+        }
+
+        & input {
+            appearance: none;
+            border-radius: 50%;
+            border: 1px solid var(--stroke-default);
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            height: 24px;
+            width: 24px;
+        }
+
+        & input[type="radio"]:checked, & input[type="checkbox"]:checked {
+            background: var(--stroke-highlight);
+            border: 1px solid var(--stroke-highlight);
+        }
+
+        & img {
+            height: 48px;
+            width: 48px;
+        }
+
+        & span {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            line-height: 150%;
+            font-weight: 500;
+        }
+    }
+
+    
+}
+
+.check-group {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+}
+
+.check-group.grow > label {
+    flex: 1 0 auto;
+}
+
+.check-group > label {
+    min-width: 120px;
+    /* flex: 1 1; */
+}
+
+fieldset.politica {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 16px;
+    line-height: 150%;
+    gap: 12px;
+    color: var(--text-primary);
+
+    & strong {
+        font-weight: 500;
+        color: var(--text-highlight);
+    }
+
+    & input {
+        align-self: flex-start;
+    }
+}
+
+fieldset.submit {
+    padding-top: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    & button {
+        width: 183px;
+        height: 48px;
+        border-radius: 8px;
+        border: 1px solid var(--brand-dark);
+        outline: 1px solid var(--brand-dark);
+        background-color: var(--brand-dark);
+        color: white;
+        font-size: 16px;
+        font-family: inherit;
+        line-height: 150%;
+        font-weight: 500;
+    
+        &:first-child {
+            background-color: white;
+            color: var(--brand-dark);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
+}
+
+
+

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Formulário de matrícula</title>
+</head>
+<body>
+    <main> 
+        <form action="" method="get">
+            <header>
+                <a href="">
+                    <img src="assets/icons/arrow-left-02.png" alt="Arrow icon">
+                    <span>Voltar</span>
+                </a>
+                <h2>Formulário de matrícula</h2>
+                <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estralas do Amanhã</p>
+            </header>
+            <fieldset>
+                <legend>Informações da criança</legend>
+                <div class="form-control">
+                    <label for="inome-crianca">Nome completo</label>
+                    <input id="inome-crianca" type="text" required>
+                </div>
+                <div class="form-control">
+                    <label for="idata-nascimento">Data de nascimento</label>
+                    <input id="idata-nascimento" type="date" required>
+                </div>
+                <div class="form-control">
+                    <label for="isexo">Sexo</label>
+                    <select name="sexo" id="isexo" size="1" required>
+                        <option value="Feminimo">Feminino</option>
+                        <option value="Masculino">Masculino</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="iinformacoes-medicas">Informações médicas</label>
+                    <textarea name="informacoes-medicas" id="iinformacoes-medicas"></textarea>
+                </div>
+                <div class="form-control">
+                    <label for="icertidao-nascimento">Certidão de nascimento</label>
+                    <div class="dropzone">
+                        <input type="file" name="certidao-nascimento" id="icertidao-nascimento" required>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.9552 18.0221C34.97 18.022 34.985 18.022 35 18.022C39.9706 18.022 44 22.0588 44 27.0386C44 31.6796 40.5 35.5016 36 36M34.9552 18.0221C34.9848 17.6921 35 17.3579 35 17.0202C35 10.9339 30.0752 6 24 6C18.2465 6 13.5247 10.4253 13.0408 16.0638M34.9552 18.0221C34.7506 20.2952 33.8572 22.3692 32.4856 24.033M13.0408 16.0638C7.96796 16.5475 4 20.8278 4 26.0366C4 30.8834 7.43552 34.9264 12 35.8546M13.0408 16.0638C13.3565 16.0337 13.6765 16.0183 14 16.0183C16.2516 16.0183 18.3295 16.7639 20.001 18.022" stroke="#D6D3D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 26V42M24 26C22.5996 26 19.9831 29.9886 19 31M24 26C25.4004 26 28.017 29.9886 29 31" stroke="#D6D3D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                        <p>Clique aqui para selecionar os arquivos</p>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Endereço residencial</legend>
+                <div class="form-control">
+                    <label for="icep">CEP</label>
+                    <input type="text" name="cep" id="icep" required>
+                </div>
+                <div class="form-group">
+                    <div class="form-control">
+                        <label for="irua">Rua</label>
+                        <input type="text" name="rua" id="irua" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="inumero">Número</label>
+                        <input type="text" name="numero" id="inumero" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="icidade">Cidade</label>
+                        <input type="text" name="cidade" id="icidade" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="iestado">Estado</label>
+                        <input type="text" name="estado" id="iestado" required>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Informações do responsável</legend>
+                <div class="form-control">
+                    <label for="inome-resp">Nome do responsável</label>
+                    <input type="text" name="nome-resp" id="inome-resp" required>
+                    <label class="helper" for="inome-resp">Principal responsável legal e contato de emergência</label>
+                </div>
+                <div class="form-control">
+                    <label for="itelefone">Telefone</label>
+                    <input type="text" name="telefone" id="itelefone" required>
+                </div>
+                <div class="form-control">
+                    <label for="iestado">E-mail</label>
+                    <input type="email" name="email" id="iemail" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Opções de matrícula</legend>
+                <div class="check-control">
+                    <p>Selecione o turno de estudo</p>
+                    <div class="check-group grow">
+                        <label for="iturno-manha">
+                            <input type="radio" name="turno" id="iturno-manha">
+                            <img src="assets/icons/sun-cloud-02.png" alt="Icon manhã">
+                            <span>Manhã</span>
+                        </label>
+                        <label for="iturno-tarde">
+                            <input type="radio" name="turno" id="iturno-tarde">
+                            <img src="assets/icons/sun-02.png" alt="Icon tarde">
+                            <span>Tarde</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="check-control">
+                    <p>Em qual esporte você gostaria de inscrever seu filho?</p>
+                    <div class="check-group">
+                        <label for="ifutebol">
+                            <input type="checkbox" name="futebol" id="ifutebol">
+                            <img src="assets/icons/football.png" alt="Icon futebol">
+                            <span>Futebol</span>
+                        </label>
+                        <label for="ibasquete">
+                            <input type="checkbox" name="basquete" id="ibasquete">
+                            <img src="assets/icons/basketball-02.png" alt="Icon basquete">
+                            <span>Basquete</span>
+                        </label>
+                        <label for="inatacao">
+                            <input type="checkbox" name="natacao" id="inatacao">
+                            <img src="assets/icons/swimming.png" alt="Icon natacao">
+                            <span>Natação</span>
+                        </label>
+                        <label for="iyoga">
+                            <input type="checkbox" name="yoga" id="iyoga">
+                            <img src="assets/icons/yoga-02.png" alt="Icon yoga">
+                            <span>Yoga</span>
+                        </label>
+                        <label for="ivolei">
+                            <input type="checkbox" name="volei" id="ivolei">
+                            <img src="assets/icons/volleyball.png" alt="Icon volei">
+                            <span>Volei</span>
+                        </label>
+                        <label for="ibox">
+                            <input type="checkbox" name="box" id="ibox">
+                            <img src="assets/icons/boxing-glove-01.png" alt="Icon box">
+                            <span>Boxe</span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="politica">
+                <input type="checkbox" id="ipolitica" required>
+                <label for="ipolitica">Declaro que li e concordo com <strong>Termos e Condições</strong> e com a <strong>Política de Privacidade</strong> da escola Estrela do Amanhã</label>
+            </fieldset>
+            <fieldset class="submit"> 
+                <button type="button">Salvar Respostas</button>
+                <button type="submit">Fazer matrícula</button>
+            </fieldset>
+        </form>
+        <div class="fixed-frame">
+            <div>
+                <span>
+                    <img src="assets/images/Frame 48095957.png" alt="Estrelas">
+                    <span>Estrelas do Amanhã</span>
+                </span>
+                <h1>Porque cada momento de <strong>aprendizado</strong> conta</h1>
+                <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante</p>
+            </div>
+            <img src="assets/images/Illustration.png" alt="Imagem Estrelas do Amanhã">
+        </div>
+    </main>
+</body>
+</html>

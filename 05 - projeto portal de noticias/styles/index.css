@@ -1,0 +1,9 @@
+@import url(global.css);
+@import url(nav.css);
+@import url(main.css);
+
+body {
+    background-color: var(--bg-color);
+    width: 1280px;
+    margin: auto;
+}

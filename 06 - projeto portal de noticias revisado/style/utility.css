@@ -1,0 +1,78 @@
+/* Utility first */
+/* FLEX */
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-flow: row nowrap;
+}
+
+.flex-column {
+    flex-flow: column nowrap;
+}
+
+.flex-justify-content-space-between {
+    justify-content: space-between;
+}
+
+.flex-align-items-center {
+    align-items: center;
+}
+/* FLEX */
+
+/* GAP */
+.gap-4 {
+    gap: 4px;
+}
+
+.gap-8 {
+    gap: 8px;
+}
+
+.gap-12 {
+    gap: 12px;
+}
+
+.gap-15 {
+    gap: 15px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-24 {
+    gap: 24px;
+}
+
+.gap-32 {
+    gap: 32px;
+}
+
+.gap-80 {
+    gap: 80px;
+}
+/* GAP */
+
+/* TEXT */
+.text-2xl {
+    font: var(--h1);
+}
+
+.text-xl {
+    font: var(--h2);
+}
+
+.text-lg {
+    font: var(--h3);
+}
+
+.text-sm {
+    font: var(--text-sm);
+}
+/* TEXT */

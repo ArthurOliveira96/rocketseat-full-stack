@@ -1,0 +1,67 @@
+p {
+    margin: 12px;
+    font-weight: bold;
+}
+
+div {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    margin-bottom: 12px;
+    margin-left: 12px;
+}
+
+.section {
+    border: 1px solid black;
+    margin-bottom: 24px;
+}
+
+/* RELATIVE - relativo a si proprio, i.e, a sua posicao no normal flow */
+div.relative {
+    background-color: red;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+}
+/* RELATIVE */
+
+/* ABSOLUTE - relativo ao pai mais proximo com position diferente de static */
+.section-absolute {
+    /* Diferente do padrao (static) */
+    position: relative;
+}
+
+div.absolute {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    background-color: blue;
+}
+/* ABSOLUTE */
+
+/* FIXED - em relacao ao pai absoluto, i.e, posicao fixa na paigna web*/
+div.fixed {
+    background-color: green;
+    position: fixed;
+    top: 4px;
+    right: 4px;
+}
+/* FIXED */
+
+/* STICKY - fixo dentro do container pai que tenha overflow - indo de uma posicao a outra ate chegar na posicao top e bottom que colocamos - de todos eh o mais complexo e a unica utilidade que consigo pensar para esta estilizacao eh para manter o cabecalho de uma table visivel */
+.section-sticky {
+    height: 300px;
+    overflow: scroll;
+}
+
+div.sticky {
+    position: sticky;
+    background-color: blueviolet;
+    top: 12px;
+    bottom: 12px;
+
+    /* Horizontalmente nao vai funcionar pois precisa ter scroll horizontal */
+    right: 4px;
+}
+/* STICKY */

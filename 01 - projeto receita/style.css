@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --background-color: #573824;
+    --surface-color: #F0E8C2;
+    --text-color-primary: #291B1A;
+    --text-color-secondary: #573A37;
+    --text-color-on-bg: #F0E8C2;
+    --font-family: "Alice", serif;
+    --border-radis: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    padding: 48px;
+    background-image: url(img/Página\ de\ receita.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 140%;
+    color: var(--text-color-primary);
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--text-color-primary);
+    margin-bottom: 4px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-color-secondary);
+}
+
+p + p {
+    margin-top: 12px;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.container {
+    background-color: var(--surface-color);
+    margin: auto;
+    padding: 24px;
+    max-width: 800px;
+    border-radius: var(--border-radis);
+}
+
+.container img {
+    width: 100%;
+    border-radius: var(--border-radis);
+}
+
+.container main {
+    padding: 0 24px 24px 24px;
+}
+
+.container main section {
+    margin-top: 24px;
+}
+
+.creditos {
+    margin-top: 24px;
+}
+
+.creditos p {
+    text-align: center;
+    color: var(--text-color-on-bg);
+}
+
+.creditos img {
+    vertical-align: middle;
+}
+

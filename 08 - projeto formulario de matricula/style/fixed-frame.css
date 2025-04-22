@@ -1,0 +1,39 @@
+.fixed-frame {
+    background-color: var(--surface-secondary);
+    padding: 4rem;
+}
+
+.fixed-frame .welcome-message {
+    margin: auto;
+    max-width: 31rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.fixed-frame .wrapper {
+    display: grid;
+    gap: 0.5rem;
+
+    & strong {
+        font-weight: inherit;
+        color: var(--text-highlight);
+    }
+}
+
+.fixed-frame .logo {
+    font-family: "Schoolbell", cursive;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fixed-frame p {
+    color: var(--text-secondary);
+}
+
+.text-wrapper {
+    & label {
+        font-size: 0.875rem;
+    }
+}

@@ -1,0 +1,285 @@
+.form {
+    padding: 4rem;
+    overflow-y: scroll;
+}
+
+.form form {
+    margin: auto;
+    width: 33rem;
+    display: grid;
+    gap: 3rem;
+}
+
+.form header {
+    & a {
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    & h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    & p {
+        color: var(--text-secondary);
+    }
+}
+
+.form fieldset {
+    border: none;
+    display: grid;
+    gap: 1.5rem;
+
+    & legend {
+        margin-bottom: 1.5rem;
+        line-height: 125%;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
+.text-wrapper, 
+.date-wrapper, 
+.select-wrapper, 
+.textarea-wrapper,
+.tel-wrapper,
+.email-wrapper {
+    position: relative;
+    display: grid;
+    gap: 0.25rem;
+
+    & label {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    & input[type='text'], 
+    & input[type='date'],
+    & select,
+    & textarea,
+    & input[type='tel'],
+    & input[type='email'] {
+        font-family: inherit;
+        border: 1px solid var(--stroke-default);
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+        height: 3rem;
+
+        &:focus,
+        &:hover {
+            border: 1px solid var(--text-highlight);
+            outline: 3px solid var(--surface-secondary);
+        }
+
+        &:invalid:not(:focus) {
+            border: 1px solid red;
+            outline: 1px solid red;
+        }
+    }
+
+    & input[type='date'] {
+        position: relative;
+
+        &::-webkit-calendar-picker-indicator {
+            position: absolute;
+            right: 1rem;
+            background-image: url(../assets/icons/calendar-03.png);
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    & select {
+        appearance: none;
+        background-image: url(../assets/icons/Vector.png);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 1rem);
+    }
+
+    & textarea {
+        height: 7.5rem;
+    }
+
+    & small {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(calc(100% + 0.25rem));
+        color: var(--semantic-error);
+        display: none;
+        align-items: center;
+        gap: 0.25rem;   
+    }
+
+    &:has(:invalid:not(:focus)) small {
+        display: flex;
+    }
+
+}
+
+.file-wrapper {
+    position: relative;
+    border: 1px dashed var(--stroke-default);
+    border-radius: 0.5rem;
+    height: 10rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+
+    & span {
+        color: #D6D3D1;
+        width: 157px;
+    };
+    
+    & input[type='file'] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &:hover, 
+    &:focus {
+        background-color: var(--surface-secondary);
+        border: 1px dashed var(--text-highlight);
+        outline: 3px solid var(--surface-secondary);
+
+        & span {
+            color: var(--text-highlight)
+        }
+
+        & svg path {
+            stroke: var(--text-highlight);
+        }
+    }
+}
+
+.inputs-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 1.25rem;
+}
+
+.radio-wrapper,
+.checkbox-wrapper {
+    display: grid;
+    gap: 1rem;
+
+    & label {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+    }
+
+    & span {
+        text-transform: capitalize;
+    }
+
+    & .cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+        grid-template-rows: repeat(auto-fit, 8rem);
+        gap: 1rem;
+    }
+
+    & .card {
+        position: relative;
+        padding-top: 32px;
+        padding-bottom: 16px;
+        border: 1px solid var(--stroke-default);
+        border-radius: 0.5rem;
+        background-image: url(../assets/icons/vector-default.png);
+        background-repeat: no-repeat;
+        background-position: 0.58rem 0.58rem;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        gap: 0.5rem;
+
+        & input[type='radio'], 
+        & input[type='checkbox'] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            appearance: none;
+        }
+
+        &:hover {
+            background-image: url(../assets/icons/vector-focus.png);
+            border: 1px solid var(--stroke-highlight);
+            outline: 1px solid var(--stroke-highlight);
+        }
+
+        &:has(:checked) {
+            background-image: url(../assets/icons/vector-active.png);
+            border: 1px solid var(--stroke-highlight);
+            outline: 1px solid var(--stroke-highlight);
+        }
+    }
+}
+
+.terms-wrapper {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+
+    & input[type='checkbox'] {
+        appearance: none;
+        background-image: url(../assets/icons/vector2-default.png);
+        background-repeat: no-repeat;
+        flex: 1.5rem 0 0;
+        height: 1.5rem;
+
+        &:checked {
+            background-image: url(../assets/icons/vector2-active.png);
+        }
+    }
+
+    & strong {
+        font-weight: 500;
+        color: var(--text-highlight);
+    }
+
+    &:hover input[type='checkbox']:not(:checked) {
+        background-image: url(../assets/icons/vector2-focus.png);
+    }
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    & button {
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--text-highlight);
+        background-color: transparent;
+        color: var(--text-highlight);
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:last-child {
+            color: white;
+            background-color: var(--text-highlight);
+        }
+    }
+}
+

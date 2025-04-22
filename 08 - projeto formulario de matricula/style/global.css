@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid black; */
 }
 
 :root {
@@ -33,36 +34,14 @@
 }
 
 body {
+    font-family: var(--font-family);
     height: 100vh;
+    display: grid;
+    grid-template-columns: 1.025fr 0.965fr;
+    color: var(--text-primary);
 }
 
 a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
     text-decoration: none;
-    color: #57534E;
-    line-height: 150%;
-    font-size: 16px;
-
-    &:hover {
-        text-decoration: underline;
-    }
+    color: inherit;
 }
-
-main {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 51.25% 48.75%;
-}
-
-main > div, main > form {
-    padding: 64px;
-}
-
-form > fieldset, form > header, .fixed-frame > div, .fixed-frame > img {
-    max-width: 33rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
